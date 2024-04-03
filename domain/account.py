@@ -1,6 +1,18 @@
 from .transaction import Transaction
 
 class Account:
+    """
+    Represents a bank account with methods for deposit, withdrawal, and balance inquiry.
+
+    Attributes:
+        latest_account_id: Class variable for tracking the latest account ID.
+        account_id: Unique identifier of the account.
+        customer_id: ID of the customer who owns the account.
+        account_number: Account number.
+        balance: Current balance of the account.
+        transactions: List to store transaction history.
+    """
+
     latest_account_id = 0
 
     def __init__(self, customer_id, account_number, balance=0):
